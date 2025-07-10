@@ -12,7 +12,7 @@ function Book(id,title,author,pages) {
 }
 
 
-function addBookToLibrary(title,author,pages) {
+function addBookToLibrary(author,title,pages) {
     
     let book = new Book(
     this.id = crypto.randomUUID(),
@@ -28,13 +28,32 @@ function addBookToLibrary(title,author,pages) {
 console.log()
 
 
-addBookToLibrary('green moutain','boby rich',122);
-addBookToLibrary('watchdog','willy sams',232);
+addBookToLibrary('The Red Book','Carl Gustav Jung',400);
+addBookToLibrary('Sun and Steel','Yukio Mishima',140);
+addBookToLibrary('Crime and Punishment',' Fyodor Dostoevsky',550);
+addBookToLibrary('Metamorphosis','Franz Kafka',100);
+addBookToLibrary('The Stranger','Albert Camus',160);
+addBookToLibrary('Wiedzmin 3 dziki gon burek ruruek dsdsdkdask','marek mostamwoeiaasf',160);
+
+
+
+
+
+
 
 
 for (let i in myLibrary) {
-    bookshelf.innerHTML += `<div class="book"> ${myLibrary[i].title} 
-     \n  ${myLibrary[i].author}
-       \n  ${myLibrary[i].pages} </div>`
+    bookshelf.innerHTML += `<div class="book">
+    <div class="title">
+        <p class="titleText">
+        ${myLibrary[i].title} </p>
+    </div>
+     <div class="author">
+         <p class="authorText"> ${myLibrary[i].author}</p>
+     </div>
+    <div class="pages">
+        <p class="pagesText">pages: ${myLibrary[i].pages} </p> 
+    </div>
+    </div>`
 }
 console.log(myLibrary[1].title)

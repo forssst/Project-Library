@@ -53,6 +53,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Almendra SC', serif;
 }
 
 .container {
@@ -62,8 +63,8 @@ html, body {
      background-repeat: no-repeat; 
      background-size: cover; 
      display: grid;
-    grid-template-columns: 0.5fr 2fr 0.5fr;
-    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 0.3fr 2fr 0.3fr;
+    grid-template-rows: 0.3fr 2fr 0.3fr;
 }
 
 .header {
@@ -81,12 +82,88 @@ html, body {
      border: 40px solid rgb(54, 34, 1);
 
     display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-template-rows: 1fr 1fr;
+      position: relative;
+      gap: 6px;
+      align-items: end;
+
+      
    
 }
 
-.book {
- color: #ffff;
+.bookshelf::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 10px; 
+  background-color: rgb(54, 34, 1);
+  transform: translateY(-50%); 
+  z-index: 1;
+  
 }
+
+.book {
+ color: #f5c33c;
+ background-color: #b53a43;
+box-shadow: 51px 26px 28px -9px rgba(0, 0, 0, 0.75);
+height: 100%;
+border-radius: 8px;
+
+display: grid;
+grid-template-rows: 2fr 2fr 1fr;
+}
+
+
+.book:nth-child(2n) {
+  height: 95%;
+  
+}
+
+.book:nth-child(3n) {
+  height: 85%;
+  background-color: #37493e;
+}
+.book:nth-child(4n) {
+  height: 80%;
+  
+}
+.book:nth-child(5n) {
+  height: 90%;
+  background-color: #050e43;
+  
+}
+
+
+.titleText, .authorText, .pagesText {
+  text-align: center;
+  word-wrap: break-word;
+/* white-space: pre-wrap; */
+word-break: break-word;
+}
+
+.title {
+  margin-top: 10px;
+  border-bottom: 3px dotted #f5c33c;
+
+}
+
+.author {
+  border-bottom: 3px solid #f5c33c;
+  border-top: 3px solid #f5c33c;
+  align-self: center;
+}
+
+.pages {
+    border-top: 3px solid #f5c33c;
+  align-self: end;
+  margin-bottom: 10px;
+}
+
+
+
 
 
 .footer {
