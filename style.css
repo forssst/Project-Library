@@ -70,6 +70,7 @@ html, body {
 .header {
     grid-column: 1/-1;
     grid-row: 1;
+    display: grid;
 }
 
 .bookshelf {
@@ -86,11 +87,10 @@ html, body {
     grid-template-rows: 1fr 1fr;
       position: relative;
       gap: 6px;
-      align-items: end;
-
-      
-   
+      align-items: end; 
 }
+
+
 
 .bookshelf::before {
   content: "";
@@ -142,6 +142,7 @@ grid-template-rows: 2fr 2fr 1fr;
   word-wrap: break-word;
 /* white-space: pre-wrap; */
 word-break: break-word;
+font-size: 1.3em;
 }
 
 .title {
@@ -163,6 +164,18 @@ word-break: break-word;
 }
 
 
+.addBook {
+  grid-column: 3;
+  grid-row: 2;
+  justify-self: center;
+  align-self: flex-start;
+}
+
+.headerText {
+  grid-column: 2;
+}
+
+
 
 
 
@@ -172,3 +185,24 @@ word-break: break-word;
 }
 
 
+
+@media (max-width: 1800px) {
+  .bookshelf {
+  grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+  }
+
+
+  .titleText, .authorText, .pagesText {
+  text-align: center;
+  word-wrap: break-word;
+/* white-space: pre-wrap; */
+word-break: break-word;
+font-size: 0.8em;
+}
+}
+
+
+
+.dialog {
+  margin: auto;
+}

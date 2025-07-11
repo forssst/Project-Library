@@ -1,4 +1,6 @@
-const bookshelf = document.querySelector(".bookshelf")
+const bookshelf = document.querySelector(".bookshelf");
+const addBookButton = document.querySelector('.addBook');
+const dialog = document.querySelector('.dialog')
 
 const myLibrary = [];
 
@@ -25,7 +27,7 @@ function addBookToLibrary(author,title,pages) {
 }
 
 
-console.log()
+
 
 
 addBookToLibrary('The Red Book','Carl Gustav Jung',400);
@@ -33,7 +35,7 @@ addBookToLibrary('Sun and Steel','Yukio Mishima',140);
 addBookToLibrary('Crime and Punishment',' Fyodor Dostoevsky',550);
 addBookToLibrary('Metamorphosis','Franz Kafka',100);
 addBookToLibrary('The Stranger','Albert Camus',160);
-addBookToLibrary('Wiedzmin 3 dziki gon burek ruruek dsdsdkdask','marek mostamwoeiaasf',160);
+
 
 
 
@@ -56,4 +58,9 @@ for (let i in myLibrary) {
     </div>
     </div>`
 }
-console.log(myLibrary[1].title)
+
+
+
+addBookButton.addEventListener('click', (e) => {
+    dialog.showModal()
+})

@@ -11,8 +11,35 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">header</div>
-        <div class="bookshelf">
+        <div class="header">
+            <h1 class="headerText">library</h1>
+        </div>
+         <button class="addBook">Add Book</button>
+         <dialog class="dialog">
+             <form action="post">
+                 <div>
+                     <label for="bookTitle">Title:</label>
+                     <input id="bookTitle" required type="text" autofocus class="bookTitleInput">
+                 </div>
+                 <div>
+                     <label for="bookAuthor">Author:</label>
+                     <input id="bookAuthor" required type="text" class="bookAuthorInput">
+                 </div>
+                 <div>
+                     <label for="bookPages">pages</label>
+                     <input id="bookPages" required type="number" class="bookPagesInput">
+                 </div>
+                 <div>
+                     <label for="bookRead">Read</label>
+                     <input id="bookRead"  type="checkbox" class="bookReadInput">
+                 </div>
+                 <div class="formButtons">
+                    <button class="submitForm">Submit</button>
+                    <button class="cancel">Cancel</button>
+                 </div>
+             </form>
+         </dialog>
+        <div class="bookshelf"> 
         </div>
         <div class="footer"></div>
     </div>
