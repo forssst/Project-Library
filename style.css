@@ -73,6 +73,8 @@ html, body {
     display: grid;
 }
 
+
+
 .bookshelf {
     grid-column: 2/3;
     grid-row: 2;
@@ -137,6 +139,8 @@ grid-template-rows: 2fr 2fr 1fr;
 }
 
 
+
+
 .titleText, .authorText, .pagesText {
   text-align: center;
   word-wrap: break-word;
@@ -169,10 +173,21 @@ font-size: 1.3em;
   grid-row: 2;
   justify-self: center;
   align-self: flex-start;
+  margin-top: 60px;
+  padding: 30px;
+  width: 80%;
+  background-color: rgb(54, 34, 1);
+  color: #f5c33c;
+  font-weight: 600;
+  border: 3px solid #f5c33c;
 }
+
+
 
 .headerText {
   grid-column: 2;
+  font-size: 6em;
+  color: #f5c33c;
 }
 
 
@@ -185,11 +200,33 @@ font-size: 1.3em;
 }
 
 
-
 @media (max-width: 1800px) {
   .bookshelf {
   grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
   }
+    .bookButtons {
+  display: flex;
+
+  justify-content: space-around;
+  font-size: 0.6em;
+   font-weight: 600;
+}
+}
+
+  @media (max-width: 1600px) {
+  .bookshelf {
+  grid-template-columns: repeat(auto-fill,minmax(80px,1fr));
+  }
+  .bookButtons {
+  display: flex;
+    flex-direction: column;
+  justify-content: space-around;
+   font-size: 0.5em;
+   font-weight: 600;
+}
+
+  
+}
 
 
   .titleText, .authorText, .pagesText {
@@ -199,10 +236,126 @@ font-size: 1.3em;
 word-break: break-word;
 font-size: 0.8em;
 }
-}
+
 
 
 
 .dialog {
   margin: auto;
+  width: 20%;
+    background-color: rgb(54, 34, 1);
+  color: #f5c33c;
+  font-weight: 600;
+  border: 3px solid #f5c33c;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.bookButtons {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.readButton, .removeButton {
+  display:none;
+  background-color: #f5c33c;
+}
+
+
+
+
+.hoverButton {
+  display: inline;
+}
+
+
+.bookTitleDiv {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+}
+
+.bookTitleInput {
+  width: 100%;
+}
+
+.bookTitleLabel {
+  align-self: center;
+}
+
+.bookAuthorDiv {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.bookAuthorInput {
+
+  width: 100%;
+}
+
+.bookAuthorLabel {
+  align-self: center;
+}
+
+.bookPagesDiv {
+    display: flex;
+  margin: 20px;
+  flex-direction: column;
+
+}
+
+.bookPagesLabel {
+  align-self: center;
+}
+
+.bookReadDiv {
+  display: flex;
+  margin: 20px;
+  flex-direction: column;
+}
+
+.bookReadLabel {
+  align-self: center;
+}
+
+
+
+.formButtons {
+  display: flex;
+  margin: 20px;
+  justify-content: space-evenly;
+}
+
+.submitFormButton {
+  color: #f5c33c;
+  background-color: #37493e;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
+
+}
+.submitFormButton:hover {
+  background-color: #3b7a53;
+}
+
+
+.cancelButton {
+   color: #f5c33c;
+  background-color:#b53a43;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+
+.cancelButton:hover {
+  background-color:#d92935;
+
 }

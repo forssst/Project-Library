@@ -16,26 +16,26 @@
         </div>
          <button class="addBook">Add Book</button>
          <dialog class="dialog">
-             <form action="post">
-                 <div>
-                     <label for="bookTitle">Title:</label>
-                     <input id="bookTitle" required type="text" autofocus class="bookTitleInput">
+             <form class="form" action="post">
+                 <div class="bookTitleDiv">
+                     <label for="bookTitle" class="bookTitleLabel">Title:</label>
+                     <input id="bookTitle"  name="bookTitle" required type="text" autofocus class="bookTitleInput">
                  </div>
-                 <div>
-                     <label for="bookAuthor">Author:</label>
-                     <input id="bookAuthor" required type="text" class="bookAuthorInput">
+                 <div class="bookAuthorDiv">
+                     <label for="bookAuthor" class="bookAuthorLabel">Author:</label>
+                     <input id="bookAuthor" type="text" required class="bookAuthorInput">
                  </div>
-                 <div>
-                     <label for="bookPages">pages</label>
-                     <input id="bookPages" required type="number" class="bookPagesInput">
+                 <div class="bookPagesDiv">
+                     <label for="bookPages" class="bookPagesLabel">Pages:</label>
+                     <input id="bookPages"  type="number" required class="bookPagesInput">
                  </div>
-                 <div>
-                     <label for="bookRead">Read</label>
-                     <input id="bookRead"  type="checkbox" class="bookReadInput">
+                 <div class="bookReadDiv">
+                     <label for="bookRead" class="bookReadLabel">Read:</label>
+                     <input id="bookRead"  type="checkbox"  value='false' class="bookReadInput">
                  </div>
                  <div class="formButtons">
-                    <button class="submitForm">Submit</button>
-                    <button class="cancel">Cancel</button>
+                    <button type="button" class="submitFormButton">Submit</button>
+                    <button type="button" class="cancelButton">Cancel</button>
                  </div>
              </form>
          </dialog>
